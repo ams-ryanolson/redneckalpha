@@ -18,6 +18,14 @@ const links = [
 	},
 	{
 		id: 3,
+		name: "Amazon Wishlist",
+		url: "https://www.amazon.ca/hz/wishlist/ls/YMRAC1Q8PNYU",
+		colour: "bg-sky-600",
+		hover: "hover:bg-sky-700",
+		type: "social",
+	},
+	{
+		id: 4,
 		name: "OnlyFans",
 		url: "https://onlyfans.com/realgayredneck",
 		colour: "bg-sky-600",
@@ -25,7 +33,7 @@ const links = [
 		type: "social",
 	},
 	{
-		id: 4,
+		id: 5,
 		name: "CashApp",
 		url: "https://cash.app/$tattooalpha",
 		colour: "bg-green-600",
@@ -33,7 +41,7 @@ const links = [
 		type: "payment",
 	},
 	{
-		id: 5,
+		id: 6,
 		name: "Wishtender",
 		url: "https://wishtender.com/realgayredneck",
 		colour: "bg-sky-600",
@@ -41,7 +49,7 @@ const links = [
 		type: "social",
 	},
 	{
-		id: 6,
+		id: 7,
 		name: "Github",
 		url: "https://github.com/ams-ryanolson",
 		colour: "bg-sky-600",
