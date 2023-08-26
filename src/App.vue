@@ -82,6 +82,7 @@ const links = [
 				class="w-full cursor-pointer h-12 rounded-xl text-center justify-center"
 				:class="[link.colour, link.hover]"
 				:href="link.url"
+				target="_blank"
 			>
 				<div
 					class="text-white flex items-center justify-center place-items-center h-full"
