@@ -4,40 +4,38 @@ const links = [
 		id: 1,
 		name: "Twitter",
 		url: "https://www.twitter.com/realgayredneck",
-		colour:
-			"bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] from-sky-400 to-blue-800",
+		colour: "bg-sky-600",
 		hover: "hover:bg-sky-700",
 		type: "social",
 	},
 	{
 		id: 2,
 		name: "Instagram",
-		url: "https://www.twitter.com/realgayredneck",
-		colour:
-			"bg-gradient-to-br from-fuchsia-500 via-red-600 to-orange-400",
+		url: "https://www.instagram.com/realgayredneck",
+		colour: "bg-sky-600",
 		hover: "hover:bg-sky-700",
 		type: "social",
 	},
 	{
 		id: 3,
-		name: "Only Fans",
-		url: "https://www.twitter.com/realgayredneck",
+		name: "OnlyFans",
+		url: "https://onlyfans.com/realgayredneck",
 		colour: "bg-sky-600",
 		hover: "hover:bg-sky-700",
 		type: "social",
 	},
 	{
 		id: 4,
-		name: "Fansly",
-		url: "https://www.twitter.com/realgayredneck",
-		colour: "bg-sky-600",
-		hover: "hover:bg-sky-700",
-		type: "social",
+		name: "CashApp",
+		url: "https://cash.app/$tattooalpha",
+		colour: "bg-green-600",
+		hover: "bg-green-700",
+		type: "payment",
 	},
 	{
 		id: 5,
 		name: "Wishtender",
-		url: "https://www.twitter.com/realgayredneck",
+		url: "https://wishtender.com/realgayredneck",
 		colour: "bg-sky-600",
 		hover: "hover:bg-sky-700",
 		type: "social",
@@ -45,7 +43,7 @@ const links = [
 	{
 		id: 6,
 		name: "Github",
-		url: "https://www.twitter.com/realgayredneck",
+		url: "https://github.com/ams-ryanolson",
 		colour: "bg-sky-600",
 		hover: "hover:bg-sky-700",
 		type: "social",
@@ -74,8 +72,9 @@ const links = [
 				Redneck Alpha
 			</div>
 			<div class="text-gray-300 text-lg antialiased text-center">
-				I am just your average redneck alpha taking this bullshit site
-				and its bullshit money and fucking you up!
+				Sadistic alpha looking or fresh meat to abuse use and drain of
+				all your cash and dignity. Use one of the links to serve and
+				obey!
 			</div>
 			<a
 				v-for="link in links"
