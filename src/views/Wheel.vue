@@ -8,17 +8,17 @@
 		>
 			<div class="flex items-center justify-center h-full">
 				<div class="text-center">
-					<div class="text-xl">Option 1</div>
-					<div class="text-xl">Option 2</div>
-					<div class="text-xl">Option 3</div>
-					<div class="text-xl">Option 4</div>
-					<div class="text-xl">Option 5</div>
-					<div class="text-xl">Option 6</div>
-					<div class="text-xl">Option 7</div>
-					<div class="text-xl">Option 8</div>
-					<div class="text-xl">Option 9</div>
-					<div class="text-xl">Option 10</div>
-					<div class="text-xl">Option 11</div>
+					<div class="text-xl">$5</div>
+					<div class="text-xl">$10</div>
+					<div class="text-xl">$15</div>
+					<div class="text-xl">$20</div>
+					<div class="text-xl">$25</div>
+					<div class="text-xl">$30</div>
+					<div class="text-xl">$35</div>
+					<div class="text-xl">$40</div>
+					<div class="text-xl">$45</div>
+					<div class="text-xl">$50</div>
+					<div class="text-xl">Master/Alpha Choice</div>
 				</div>
 			</div>
 		</div>
@@ -44,17 +44,17 @@ const startSpinning = () => {
 		wheel.classList.add("spinning-slow");
 
 		const options = [
-			"Option 1",
-			"Option 2",
-			"Option 3",
-			"Option 4",
-			"Option 5",
-			"Option 6",
-			"Option 7",
-			"Option 8",
-			"Option 9",
-			"Option 10",
-			"Option 11",
+			"$5",
+			"$10",
+			"$15",
+			"$20",
+			"$25",
+			"$30",
+			"$35",
+			"$40",
+			"$45",
+			"$50",
+			"Masters / Alpha Choice",
 		];
 		result.value =
 			options[Math.floor(Math.random() * options.length)];
