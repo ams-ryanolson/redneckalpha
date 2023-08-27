@@ -208,6 +208,9 @@ const applyPreset = (presetType) => {
 		numOptions.value = 10;
 	}
 
+	// Clear selectedOptions array
+	selectedOptions.value = [];
+
 	// Update selectedOptions with presetData
 	for (
 		let i = 0;

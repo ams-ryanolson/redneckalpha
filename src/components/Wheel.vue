@@ -7,18 +7,12 @@
 			@click="startSpinning"
 		>
 			<div class="flex items-center justify-center h-full">
-				<div class="text-center">
-					<div class="text-xl">$5</div>
-					<div class="text-xl">$10</div>
-					<div class="text-xl">$15</div>
-					<div class="text-xl">$20</div>
-					<div class="text-xl">$25</div>
-					<div class="text-xl">$30</div>
-					<div class="text-xl">$35</div>
-					<div class="text-xl">$40</div>
-					<div class="text-xl">$45</div>
-					<div class="text-xl">$50</div>
-					<div class="text-xl">Master/Alpha Choice</div>
+				<div
+					class="text-center"
+					v-for="option in selectedOptions"
+					:key="option.id"
+				>
+					<div class="text-xl">{{ option }}</div>
 				</div>
 			</div>
 		</div>
@@ -30,34 +24,24 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, defineProps } from "vue";
 
 const result = ref(null);
+const props = defineProps(["selectedOptions"]);
 
 const startSpinning = () => {
 	const wheel = document.querySelector(".wheel");
 	wheel.classList.add("spinning-fast");
 
-	const stopAfter = Math.floor(Math.random() * 10) + 11;
+	const stopAfter = Math.floor(Math.random() * 10) + 1;
 	setTimeout(() => {
 		wheel.classList.remove("spinning-fast");
 		wheel.classList.add("spinning-slow");
 
-		const options = [
-			"$5",
-			"$10",
-			"$15",
-			"$20",
-			"$25",
-			"$30",
-			"$35",
-			"$40",
-			"$45",
-			"$50",
-			"Masters / Alpha Choice",
-		];
 		result.value =
-			options[Math.floor(Math.random() * options.length)];
+			props.selectedOptions[
+				Math.floor(Math.random() * props.selectedOptions.length)
+			];
 	}, (stopAfter - 4) * 1000);
 };
 </script>
