@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "./../views/Home.vue";
-import Wheel from "./../views/Wheel.vue";
+import Wheel from "./../views/SpinTheWheel.vue";
 import Wall from "./../views/Wall.vue";
 import RealTime from "./../views/RealTime.vue";
 import Contact from "./../views/Contact.vue";
