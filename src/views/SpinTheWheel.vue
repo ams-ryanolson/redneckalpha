@@ -16,18 +16,21 @@
 			</div>
 
 			<!-- Options Dropdowns -->
-			<div class="flex flex-col gap-2 mt-4">
+			<div class="flex flex-col gap-3 mt-4">
 				<div
 					v-for="index in numOptions"
 					:key="index"
 					class="flex items-center"
 				>
-					<label :for="'option' + index" class="text-gray-200 pr-2">
+					<label
+						:for="'option' + index"
+						class="text-gray-200 pr-2 w-32"
+					>
 						Option {{ index }}:
 					</label>
 					<select
 						:id="'option' + index"
-						class="bg-gray-800 px-4 py-3 text-white border-gray-700 border w-48"
+						class="bg-gray-800 px-4 py-3 text-white border-gray-700 border w-full"
 						v-model="selectedOptions[index - 1]"
 					>
 						<option
@@ -40,14 +43,20 @@
 				</div>
 			</div>
 
-			<!-- Add More Options Button -->
-			<button
-				@click="addOption"
-				class="text-gray-300 hover:text-white mt-2"
-				:class="{ hidden: numOptions === 10 }"
-			>
-				+ Add More Options
-			</button>
+			<div class="w-full flex justify-between gap-6">
+				<button
+					@click="addOption"
+					class="text-white mt-2 w-full py-4 bg-sky-600 hover:bg-sky-700 rounded-lg"
+					:class="{ hidden: numOptions === 10 }"
+				>
+					Add Option
+				</button>
+				<button
+					class="text-white mt-2 w-full py-4 bg-red-600 hover:bg-red-700 rounded-lg"
+				>
+					Show Wheel
+				</button>
+			</div>
 		</div>
 	</div>
 </template>
