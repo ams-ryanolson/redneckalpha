@@ -1,6 +1,6 @@
 <template>
 	<div
-		class="min-h-screen min-w-screen bg-gradient-to-br from-gray-700 via-gray-800 to-black py-16 flex flex-col items-center justify-center"
+		class="min-h-screen min-w-screen flex flex-col items-center justify-center"
 	>
 		<div
 			class="wheel p-8 rounded-full border-4 border-white cursor-pointer transform transition-transform duration-400"
