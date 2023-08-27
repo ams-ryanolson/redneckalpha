@@ -12,27 +12,27 @@ const MainMenuList = [
 	{
 		id: 1,
 		name: "Home",
-		url: "",
+		url: "/",
 	},
 	{
 		id: 2,
 		name: "Wheel",
-		url: "",
+		url: "/wheel",
 	},
 	{
 		id: 3,
 		name: "Wall Of Shame",
-		url: "",
+		url: "/wall-of-shame",
 	},
 	{
 		id: 4,
 		name: "Real Time Meets",
-		url: "",
+		url: "/real-time",
 	},
 	{
 		id: 5,
 		name: "Contact",
-		url: "",
+		url: "/contact",
 	},
 ];
 </script>
@@ -66,11 +66,12 @@ const MainMenuList = [
 				v-for="item in MainMenuList"
 				:key="item.id"
 			>
-				<div
+				<router-link
+					:to="item.url"
 					class="text-white py-6 uppercase font-semibold text-2xl flex justify-center cursor-pointer"
 				>
 					{{ item.name }}
-				</div>
+				</router-link>
 			</div>
 		</div>
 	</div>
