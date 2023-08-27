@@ -1,4 +1,13 @@
 <script setup>
+import { ref } from "vue";
+import MainMenu from "./components/MainMenu.vue";
+
+const isMenuOpen = ref(false);
+
+const toggleMenu = () => {
+	isMenuOpen.value = !isMenuOpen.value;
+};
+
 const links = [
 	{
 		id: 1,
@@ -66,12 +75,35 @@ const links = [
 		<div
 			class="mx-auto max-w-[680px] min-h-[calc(100vh-128px)] flex flex-col gap-8 px-4"
 		>
-			<div
-				class="bg-gradient-to-r from-fuchsia-500 via-red-600 to-orange-400 w-48 mx-auto rounded-full"
-			>
-				<img
-					class="rounded-full h-48 w-48 mx-auto p-1"
-					src="https://pbs.twimg.com/profile_images/1686167929375608832/eAdENE4x_400x400.jpg"
+			<div class="flex flex-row justify-between">
+				<div class="w-10 h-10"></div>
+				<div
+					class="bg-gradient-to-r from-fuchsia-500 via-red-600 to-orange-400 w-48 mx-auto rounded-full"
+				>
+					<img
+						class="rounded-full h-48 w-48 mx-auto p-1"
+						src="https://pbs.twimg.com/profile_images/1686167929375608832/eAdENE4x_400x400.jpg"
+					/>
+				</div>
+				<div @click="isMenuOpen = !isMenuOpen" class="cursor-pointer">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						class="text-white w-10 h-10"
+					>
+						<line x1="3" y1="12" x2="21" y2="12" />
+						<line x1="3" y1="6" x2="21" y2="6" />
+						<line x1="3" y1="18" x2="21" y2="18" />
+					</svg>
+				</div>
+				<MainMenu
+					:isMenuOpen="isMenuOpen"
+					@update:isMenuOpen="toggleMenu"
 				/>
 			</div>
 			<div
